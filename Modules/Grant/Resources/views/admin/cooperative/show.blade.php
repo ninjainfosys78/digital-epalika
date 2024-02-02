@@ -1,0 +1,149 @@
+@extends('admin.layouts.master')
+
+@section('content')
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title-box">
+                <div class="page-title-right">
+                    <ol class="breadcrumb m-0">
+                        <li class="breadcrumb-item">
+                            <a href="{{route('admin.grant.dashboard')}}">
+                               <img class="icon me-1" src="{{asset('assets/backend/images/home.svg')}}" alt="document-icon">
+                            गृहपृष्ठ
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item active">सहकारी</li>
+                    </ol>
+                </div>
+                <h4 class="page-title">सहकारी</h4>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-xl-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    {{--                    <img src="{{$cooperative->photo_url}}" class="rounded-circle avatar img-thumbnail"--}}
+                    {{--                         alt="{{$cooperative->name}}" style="object-fit: cover; height: 6rem; width: 6rem">--}}
+
+                    {{--                    <h3 class="mt-3">{{$cooperative->name}}</h3>--}}
+                    {{--                    <h5 class="mb-0 text-dark">{{$cooperative->unique_id}}</h5>--}}
+                    {{--                    <hr class="border-top border-1">--}}
+                    <div class="text-start mt-3">
+
+                        <p class=" text-dark mb-2 font-16"><strong>सहकारी परिचय पत्र नं.:</strong>
+                            <span class="ms-2 text-muted">{{$cooperative->unique_id}}</span>
+                        </p>
+                        <p class="border-top border-1 text-dark mb-2 font-16"><strong>सहकारी नाम :</strong> <span
+                                class="ms-2 text-muted">{{$cooperative->name}}</span></p>
+
+                        <p class="border-top border-1 text-dark mb-2 font-16"><strong>सहकारी प्रकार :</strong> <span
+                                class="ms-2 text-muted">{{$cooperative->cooperativeType->title ?? ''}}</span></p>
+
+                        <p class=" border-top border-1 text-dark mb-2 font-16"><strong>दर्ता नं:</strong> <span
+                                class="ms-2 text-muted">{{$cooperative->registration_no}}</span></p>
+
+                        <p class="border-top border-1 text-dark mb-2 font-16"><strong>दर्ता मिति:</strong><span
+                                class="ms-2 text-muted">{{$cooperative->registration_date}}</span></p>
+
+                        <p class="border-top border-1 text-dark mb-2 font-16"><strong>भ्याट प्यान:</strong> <span
+                                class="ms-2 text-muted">{{$cooperative->vat_pan}}</span></p>
+
+                        <p class=" border-top border-1 text-dark mb-2 font-16"><strong>उद्देश्य:</strong> <span
+                                class="ms-2 text-muted">{{$cooperative->objective}}</span></p>
+
+                        <p class="border-top border-1 text-dark mb-2 font-16"><strong>आध्वता:</strong> <span
+                                class="ms-2 text-muted">{{$cooperative->affiliation->name?? ''}}</span></p>
+
+                        <p class="border-top border-1 text-dark mb-2 font-16"><strong>ठेगाना :</strong> <span
+                                class="ms-2 text-muted">{{$cooperative->province->province ??''}},
+                                {{$cooperative->district->district ??''}},
+                                {{$cooperative->localBody->local_body ??''}} -
+                                {{$cooperative->ward_no ??''}},
+                                {{$cooperative->village ??''}}
+                                {{$cooperative->tole ??''}}
+                            </span></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8 col-xl-8 ">
+            <div class="row">
+                <div class="col-md-4 text-center px-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class=" text-dark font-19">सम्पर्क व्यक्तिहरू</h4>
+                            <p class=" pt-1 font-16">सहकारीको सम्पर्क व्यक्तिहरू थप्नुहोस् ।</p>
+                        </div>
+                        <div class="card-btn pb-2">
+                            <a href="" class="btn btn-sm btn-outline-primary "> विवरण हेर्नुहोस <i
+                                    class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center px-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class=" text-dark font-19">अनुदान विवरण</h4>
+                            <p class=" pt-1 font-16">सहकारीको अनुदान विवरण थप्नुहोस् ।</p>
+                        </div>
+                        <div class="card-btn pb-2">
+                            <a href="" class="btn btn-sm btn-outline-primary "> विवरण हेर्नुहोस <i
+                                    class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center px-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class=" text-dark font-19">संलग्न किसानहरू</h4>
+                            <p class=" pt-1 font-16">सहकारीमा संलग्न किसानहरूको विवरण थप्नुहोस् ।</p>
+                        </div>
+                        <div class="card-btn pb-2">
+                            <a href="" class="btn btn-sm btn-outline-primary "> विवरण हेर्नुहोस <i
+                                    class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <h4 class="header-title my-2">
+                            अनुदान लिएको तालिका
+                        </h4>
+                        <a href="{{route('admin.grant.cooperative.grantDetails', $cooperative)}}"
+                           class="btn btn-outline-primary btn-sm" style="border-radius: 25px; padding:10px">विवरण हेर्नुहोस</a>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-sm mt-3">
+                            <thead>
+                            <tr>
+                                <th scope="col">क्र.स</th>
+                                <th scope="col">कार्यक्रम/क्रियाकलाप</th>
+                                <th scope="col">अनुदानग्राही लगानी</th>
+                                <th scope="col">अनुदान स्थल</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach ($cooperative->grantDetails as $grantDetail)
+                                <tr>
+                                    <td>
+                                    {{ $loop->iteration }}</th>
+                                    <td>{{$grantDetail->grant->grantProgram->name??''}}</td>
+                                    <td>{{$grantDetail->personal_investment}}</td>
+                                    <td>{{$grantDetail->localBody->local_body ?? ''}}
+                                        - {{$grantDetail->ward_no}} {{$grantDetail->village}}
+                                        , {{$grantDetail->tole}}</td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+

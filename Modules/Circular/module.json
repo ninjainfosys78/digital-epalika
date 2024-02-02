@@ -1,0 +1,11 @@
+{
+    "name": "Circular",
+    "alias": "circular",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Circular\\Providers\\CircularServiceProvider"
+    ],
+    "files": []
+}

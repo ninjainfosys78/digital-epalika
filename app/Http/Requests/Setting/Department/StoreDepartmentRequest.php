@@ -1,0 +1,29 @@
+<?php
+
+namespace App\Http\Requests\Setting\Department;
+
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
+
+class StoreDepartmentRequest extends FormRequest
+{
+    public function authorize(): bool
+    {
+        return true;
+    }
+
+    public function rules()
+    {
+        return [
+            'title' => ['required', Rule::unique('departments', 'title')->withoutTrashed()],
+        ];
+    }
+
+    public function messages(): array
+    {
+        return [
+            'title.required' => 'विभाग अनिवार्य छ',
+            'title.unique' => 'विभाग अद्वितीय हुनुपर्छ',
+        ];
+    }
+}

@@ -1,0 +1,20 @@
+<table>
+    <thead>
+    <tr>
+        <td>क्र.सं.</td>
+        <td>नाम</td>
+        <td>पद</td>
+        <td>हस्ताक्षर</td>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach($invitedGuests as $invitedGuest)
+        <tr>
+            <td>{{get_nepali_number($loop->iteration)}}</td>
+            <td>{{$invitedGuest->name}}</td>
+            <td>{{$invitedGuest->designation}}</td>
+            <td></td>
+        </tr>
+    @endforeach
+    </tbody>
+</table>

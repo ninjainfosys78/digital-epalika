@@ -1,0 +1,11 @@
+{
+    "name": "Grant",
+    "alias": "grant",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Grant\\Providers\\GrantServiceProvider"
+    ],
+    "files": []
+}

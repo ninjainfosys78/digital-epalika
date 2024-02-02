@@ -1,0 +1,11 @@
+{
+    "name": "EMap",
+    "alias": "emap",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\EMap\\Providers\\EMapServiceProvider"
+    ],
+    "files": []
+}

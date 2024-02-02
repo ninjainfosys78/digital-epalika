@@ -1,0 +1,15 @@
+
+'circular' => ['title' => 'डिजिटल बोर्ड',
+'submenu' => [
+[
+'title' => 'सेटिंग',
+'url' => 'admin.digitalBoard.video.index',
+'active-route' => 'admin.digitalBoard.video.*'
+],
+[
+'title' => 'सेटिंग',
+'url' => 'admin.digitalBoard.notice.index',
+'active-route' => 'admin.digitalBoard.notice.*'
+]
+],
+],

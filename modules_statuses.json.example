@@ -1,0 +1,17 @@
+{
+    "DigitalBoard": false,
+    "Circular": false,
+    "EMap": false,
+    "GrievanceHandling": false,
+    "BusinessRegistration": false,
+    "ExecutiveMeeting": false,
+    "ListRegistration": false,
+    "Roaster": false,
+    "Grant": false,
+    "JudicialCommittee": false,
+    "TaskManagement": false,
+    "Recommendation": false,
+    "Plan": false,
+    "Identity": false,
+    "Revenue": false
+}

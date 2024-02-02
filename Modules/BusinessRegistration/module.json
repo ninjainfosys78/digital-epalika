@@ -1,0 +1,11 @@
+{
+    "name": "BusinessRegistration",
+    "alias": "businessregistration",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\BusinessRegistration\\Providers\\BusinessRegistrationServiceProvider"
+    ],
+    "files": []
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Roaster",
+    "alias": "roaster",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Roaster\\Providers\\RoasterServiceProvider"
+    ],
+    "files": []
+}

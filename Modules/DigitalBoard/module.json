@@ -1,0 +1,11 @@
+{
+    "name": "DigitalBoard",
+    "alias": "digitalboard",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\DigitalBoard\\Providers\\DigitalBoardServiceProvider"
+    ],
+    "files": []
+}
