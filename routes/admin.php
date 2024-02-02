@@ -41,8 +41,6 @@ Route::get('readAllNotification', [NotificationController::class, 'readAllNotifi
 //chunk file upload
 Route::post('file-upload/chunkStore', [FileUploadController::class, 'chunkFileStore'])->name('fileUpload.chunkStore');
 
-
-
 //file
 Route::get('file/{file}/download', [FileController::class, 'download'])->name('file.download');
 Route::get('file-download', [FileController::class, 'downloadFile'])->name('file-url-download');
