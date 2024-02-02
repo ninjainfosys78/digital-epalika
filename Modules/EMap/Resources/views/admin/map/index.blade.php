@@ -72,7 +72,6 @@
             <div class="tab-content">
                 <div class="tab-pane " id="tab-all">
                         <x-map-apply-component :maps="$maps" :application="$applicationFormTypeEnum" />
-
                 </div>
                 <div class="tab-pane show active" id="tab-type1">
                     <x-map-apply-component :maps="$maps->where('sent_to_organization','processing')" :application="$applicationFormTypeEnum" />
