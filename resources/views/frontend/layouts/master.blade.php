@@ -49,9 +49,7 @@
         });
     });
 </script>
+<script src="{{asset('js/browserPermission.js')}}"></script>
 @include('sweetalert::alert')
-@if(app()->environment('production'))
-    <script src="{{asset('js/newRelic.min.js')}}"></script>
-@endif
 </body>
 </html>
